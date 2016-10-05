@@ -7,6 +7,7 @@
 //
 
 #import "OYCCarouselView.h"
+#import <UIImageView+WebCache.h>
 
 #define OYCPageControlHeight 20
 #define OYCViewWidth self.frame.size.width
@@ -221,8 +222,8 @@ static BOOL isAutoFlag;
  *  给图片视图的图片赋值
  */
 -(void)setImageView:(UIImageView *)imageView withImageUrl:(NSURL *)url{
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    imageView.image = [UIImage imageWithData:data];
+
+    [imageView sd_setImageWithURL:url];
 }
 
 /**
