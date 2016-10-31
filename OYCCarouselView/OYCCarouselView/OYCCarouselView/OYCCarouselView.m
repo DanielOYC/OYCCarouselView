@@ -302,4 +302,11 @@ static BOOL isAutoFlag;
     self.pageControl.currentPage = self.currentPageIndex;
 }
 
+//赋值后重新布局
+-(void)setShowDatas:(NSArray *)showDatas{
+    _showDatas = showDatas;
+    [self layoutSubviews];
+}
+
+
 @end
