@@ -61,7 +61,7 @@
     
     //创建并且设置frame
     OYCCarouselView *carouselView = [OYCCarouselView sharedCarouselView];
-    carouselView.frame = CGRectMake(100, 100, 300, 300);
+    carouselView.frame = self.view.bounds;
     carouselView.timeInterval = 1.5;
     
     //传递数据

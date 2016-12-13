@@ -140,27 +140,29 @@ static BOOL isAutoFlag;
     return _nextImageView;
 }
 
+
+//去掉此部分，因为layoutSubviews会调用多次，导致定时器错误
 /**
  *  在此做界面布局
  */
--(void)layoutSubviews{
-    [super layoutSubviews];
-    
-    //判断应该用几张视图来显示
-    [self caculateImageViewNum];
-    
-    //创建scrollView
-    [self setupScrollView];
-    
-    //创建pageControl
-    [self setupPageControl];
-    
-    //添加内容视图
-    [self setupContentView];
-    
-    //开启轮播
-    [self startCarousel];
-}
+//-(void)layoutSubviews{
+//    [super layoutSubviews];
+//    
+//    //判断应该用几张视图来显示
+//    [self caculateImageViewNum];
+//    
+//    //创建scrollView
+//    [self setupScrollView];
+//    
+//    //创建pageControl
+//    [self setupPageControl];
+//    
+//    //添加内容视图
+//    [self setupContentView];
+//    
+//    //开启轮播
+//    [self startCarousel];
+//}
 
 /**
  *  判断应该用几张视图来显示
@@ -305,8 +307,28 @@ static BOOL isAutoFlag;
 //赋值后重新布局
 -(void)setShowDatas:(NSArray *)showDatas{
     _showDatas = showDatas;
-    [self layoutSubviews];
+//    [self layoutSubviews];
+    [self setup];
 }
+
+-(void)setup{
+    //判断应该用几张视图来显示
+    [self caculateImageViewNum];
+    
+    //创建scrollView
+    [self setupScrollView];
+    
+    //创建pageControl
+    [self setupPageControl];
+    
+    //添加内容视图
+    [self setupContentView];
+    
+    //开启轮播
+    [self startCarousel];
+}
+
+
 
 
 @end

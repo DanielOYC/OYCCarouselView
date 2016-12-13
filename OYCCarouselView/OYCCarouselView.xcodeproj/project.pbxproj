@@ -75,10 +75,6 @@
 				3A94E02F1DA4A7700030EF78 /* AppDelegate.m */,
 				3A94E0311DA4A7700030EF78 /* ViewController.h */,
 				3A94E0321DA4A7700030EF78 /* ViewController.m */,
-				3A94E0341DA4A7700030EF78 /* Main.storyboard */,
-				3A94E0371DA4A7700030EF78 /* Assets.xcassets */,
-				3A94E0391DA4A7700030EF78 /* LaunchScreen.storyboard */,
-				3A94E03C1DA4A7700030EF78 /* Info.plist */,
 				3A94E02B1DA4A7700030EF78 /* Supporting Files */,
 			);
 			path = OYCCarouselView;
@@ -87,6 +83,10 @@
 		3A94E02B1DA4A7700030EF78 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3A94E0341DA4A7700030EF78 /* Main.storyboard */,
+				3A94E0371DA4A7700030EF78 /* Assets.xcassets */,
+				3A94E0391DA4A7700030EF78 /* LaunchScreen.storyboard */,
+				3A94E03C1DA4A7700030EF78 /* Info.plist */,
 				3A94E02C1DA4A7700030EF78 /* main.m */,
 			);
 			name = "Supporting Files";
